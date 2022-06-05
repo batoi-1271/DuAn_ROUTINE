@@ -43,7 +43,7 @@ if (isset($_POST['btnLuu'])) {
 }
 ?>
 <?php
-//Lấy Tất Cả Dữ Liệu Trong Bảng Products
+//Lấy Tất Cả Dữ Liệu Trong Bảng categories
 $sql = "SELECT * FROM categories";
 $stmt = $conn->prepare($sql);
 $stmt->execute();
