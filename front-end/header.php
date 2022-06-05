@@ -19,6 +19,7 @@ if (isset($_SESSION['user'])) {
  * @param    string
  * @return    string
  */
+
 if (!function_exists('price')) {
     function price($number, $suffix = 'đ')
     {
@@ -75,6 +76,7 @@ $theme = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <link rel="stylesheet" type="text/css" href="https://kenwheeler.github.io/slick/slick/slick-theme.css" />
     <title>Thời trang nam nữ Routine</title>
 
+    <link rel="stylesheet" href="css/404.css">
 
 </head>
 
@@ -145,3 +147,4 @@ $theme = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <?php } ?>
         </ul>
     </nav>
+

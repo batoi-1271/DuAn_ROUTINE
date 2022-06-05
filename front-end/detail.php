@@ -208,9 +208,9 @@ if (isset($_POST['btnCart'])) {
                             <p class="id-prducts text">SKU: 10F20JAC002/ TOASTED COCONUT</p>
                             <hr>
                             <?php if ($products['pro_sale'] > 0) : ?>
-                            <p class="price text" style="font-weight: bold; font-size:20px"><?= price($products['pro_sale']) ?></p>
+                                <p class="price text" style="font-weight: bold; font-size:20px"><?= price($products['pro_sale']) ?></p>
                             <?php else : ?>
-                            <p class="price text" style="font-weight: bold; font-size:20px"><?= price($products['pro_price']) ?></p>
+                                <p class="price text" style="font-weight: bold; font-size:20px"><?= price($products['pro_price']) ?></p>
                             <?php endif; ?>
                             <hr>
                             <?php
@@ -223,21 +223,22 @@ if (isset($_POST['btnCart'])) {
                             <p class="text">Kho Hàng:
                                 <span>
                                     <?= $sum_qty; ?>
-                                </span></p>
+                                </span>
+                            </p>
                             <hr>
                             <div class="text">
-                            Size: <span id="size_1">...</span> còn <span id="qty_1">...</span> sản phẩm
+                                Size: <span id="size_1">...</span> còn <span id="qty_1">...</span> sản phẩm
                             </div>
                             <hr>
                             <div class="size">
                                 <?php foreach ($pro_detail as $p) : ?>
-                                <?php if($p['quantity']>0) : ?>
-                                    <input type="radio" style="display: none;" id="size_<?= $p['size'] ?>" name="size" value="<?= $p['size'] ?>">
-                                    <label onclick="check_quantity_<?= $p['size'] ?>()" for="size_<?= $p['size'] ?>"><?= $p['size'] ?></label>
-                                    <?php else :?>
-                                <?php endif; ?>
-                                
-                                <script>
+                                    <?php if ($p['quantity'] > 0) : ?>
+                                        <input type="radio" style="display: none;" id="size_<?= $p['size'] ?>" name="size" value="<?= $p['size'] ?>">
+                                        <label onclick="check_quantity_<?= $p['size'] ?>()" for="size_<?= $p['size'] ?>"><?= $p['size'] ?></label>
+                                    <?php else : ?>
+                                    <?php endif; ?>
+
+                                    <script>
                                         function check_quantity_<?= $p['size'] ?>() {
                                             document.getElementById("qty").value = 1;
                                             var x = document.getElementById("size_<?= $p['size'] ?>").value;
@@ -290,6 +291,7 @@ if (isset($_POST['btnCart'])) {
                         </div>
                     </form>
                 </div>
+               
             </div>
             <script>
                 var btnCong = document.querySelector("#cong");
@@ -336,7 +338,7 @@ if (isset($_POST['btnCart'])) {
         <!--COMMENT-->
         <div class="row">
             <div class="col-md-6">
-                
+
                 <!--Comment 2-->
 
                 <!--END comment 2-->
@@ -346,7 +348,7 @@ if (isset($_POST['btnCart'])) {
                 <?php if (!isset($_SESSION['user'])) : ?>
                     <form action="" method="POST" style="text-align:center">
                         <p style="color: red;">Vui Lòng Đăng Nhập Để Nhận Xét</p>
-                        <button type="submit" name="LoginCmt" class="btn btn-outline-danger">Đăng Nhập</button>
+                        <button type="submit" name="LoginCmt" class="btn btn-outline-danger" style="width: 50%; height: 50px; font-weight: bold;">Đăng Nhập</button>
                     </form>
                 <?php else : ?>
                     <?php if (isset($_SESSION['user'])) : ?>
@@ -380,10 +382,11 @@ if (isset($_POST['btnCart'])) {
                             <span style="float: right;">
                                 <?php if (isset($_SESSION['user'])) : ?>
                                     <?php if ($c['user_id'] == $user_id) : ?>
-                                    <a onclick="return confirm('Bạn Có Chắc Chắn Muốn Xóa Không')" href="delete_cmt.php?cmt_id=<?= $c['cmt_id']?>&cate_id=<?= $products['cate_id']?>&pro_id=<?= $products['pro_id']?>"><i class="fas fa-trash-alt" style="font-size:15px; color:red"></i></a>
+                                        <a onclick="return confirm('Bạn Có Chắc Chắn Muốn Xóa Không')" href="delete_cmt.php?cmt_id=<?= $c['cmt_id'] ?>&cate_id=<?= $products['cate_id'] ?>&pro_id=<?= $products['pro_id'] ?>"><i class="fas fa-trash-alt" style="font-size:15px; color:red"></i></a>
                                     <?php endif; ?>
                                 <?php endif; ?>
-                            </span></p>
+                            </span>
+                        </p>
 
                     </div>
                 <?php endforeach; ?>
@@ -498,4 +501,3 @@ if (isset($_POST['btnCart'])) {
 <?php
 include_once "footer.php";
 ?>
-        

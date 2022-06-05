@@ -8,3 +8,4 @@ try {
 } catch (PDOException $e) {
     echo "Connect mySQL fail!" . $e->getMessage();
 }
+    

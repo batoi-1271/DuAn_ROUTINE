@@ -73,7 +73,7 @@ include_once "header.php";
         }
     }
 ?>
-<article>
+<article class="ps-loading">
 
 
 <div class="title-cate">

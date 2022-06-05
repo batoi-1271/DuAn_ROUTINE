@@ -15,7 +15,7 @@
                 $mail->Host='smtp.gmail.com';
                 $mail->SMTPAuth=true;
                 $mail->Username='batoi1271.lch@gmail.com';
-                $mail->Password='';
+                $mail->Password='Toi@123456789';
                 $mail->SMTPSecure='tls';
                 $mail->Port=587;
                 $mail->CharSet='UTF-8';
@@ -52,7 +52,7 @@
                 $mail->Host='smtp.gmail.com';
                 $mail->SMTPAuth=true;
                 $mail->Username='batoi1271.lch@gmail.com';
-                $mail->Password='';
+                $mail->Password='Toi@123456789';
                 $mail->SMTPSecure='tls';
                 $mail->Port=587;
                 $mail->CharSet='UTF-8';

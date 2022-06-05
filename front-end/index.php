@@ -30,6 +30,8 @@ $stmt = $conn->prepare($sql);
 $stmt->execute();
 $products =  $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+// Sản phẩm mới
+
 // $sql = "SELECT * FROM products ORDER BY RAND() LIMIT 6";
 $sql = "SELECT * FROM products ORDER BY pro_id DESC LIMIT 6";
 // echo $sql;
@@ -37,6 +39,8 @@ $sql = "SELECT * FROM products ORDER BY pro_id DESC LIMIT 6";
 $stmt = $conn->prepare($sql);
 $stmt->execute();
 $pro =  $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+// Sản phẩm nhiều view
 
 $sql = "SELECT * FROM products ORDER BY pro_view DESC LIMIT 12";
 // echo $sql;
@@ -64,7 +68,6 @@ $stmt->execute();
 $pro_slide =  $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
-
 
 
 <!-- carousel -->

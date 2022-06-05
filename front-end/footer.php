@@ -38,8 +38,8 @@ if (isset($_POST['register'])) {
                 <h4>Công ty</h4>
                 <ul>
                     <li><a href="intro.php">Giới thiệu</a></li>
-                    <li><a href="#">Chăm sóc khách hàng</a></li>
-                    <li><a href="#">Hệ thống cửa hàng</a></li>
+                    <li><a href="404.php">Chăm sóc khách hàng</a></li>
+                    <li><a href="404.php">Hệ thống cửa hàng</a></li>
                     <li><a href="page_size.php">Bảng size</a></li>
                 </ul>
             </div>
@@ -47,9 +47,9 @@ if (isset($_POST['register'])) {
                 <h4>Chính sách khách hàng</a></h4>
                 <ul>
                     <li><a href="intro.php">Chính Sách Khách Hàng Thân Thiết</a></li>
-                    <li><a href="#">Chính Sách Đổi Trả</a></li>
-                    <li><a href="#">Chính Sách Bảo Hành</a></li>
-                    <li><a href="#">Câu Hỏi Thường Gặp</a></li>
+                    <li><a href="404.php">Chính Sách Đổi Trả</a></li>
+                    <li><a href="404.php">Chính Sách Bảo Hành</a></li>
+                    <li><a href="404.php">Câu Hỏi Thường Gặp</a></li>
                 </ul>
             </div>
             <div class="col-md-3">
